@@ -1,5 +1,16 @@
 # Tutorial: Menggunakan Python dengan Google Colab
 
+## 📋 Daftar Isi
+
+- [🎯 Tujuan Tutorial](#-tujuan-tutorial)
+- [📖 Apa itu Google Colab?](#-apa-itu-google-colab)
+- [🚀 Memulai dengan Google Colab](#-memulai-dengan-google-colab)
+- [📚 Tutorial Praktis](#-tutorial-praktis)
+- [🛠️ Fitur-Fitur Canggih Google Colab](#️-fitur-fitur-canggih-google-colab)
+- [📖 Tips dan Trik](#-tips-dan-trik)
+- [🎯 Latihan Praktis](#-latihan-praktis)
+- [🔗 Resources Tambahan](#-resources-tambahan)
+
 ## 🎯 Tujuan Tutorial
 Setelah mengikuti tutorial ini, Anda akan mampu:
 - Memahami apa itu Google Colab dan keunggulannya
@@ -45,6 +56,8 @@ Setelah mengikuti tutorial ini, Anda akan mampu:
 2. Kunjungi: [https://colab.research.google.com](https://colab.research.google.com)
 3. Login dengan akun Google Anda
 4. Jika belum punya akun Google, buat dulu di [accounts.google.com](https://accounts.google.com)
+
+💡 **Ingin langsung praktik?** Ikuti [Quick Start Guide](./quick-start.md) untuk memulai dalam 5 menit!
 
 ### Langkah 2: Membuat Notebook Baru
 
