@@ -28,7 +28,24 @@ Selamat datang di perjalanan Anda untuk mempelajari pemrograman! Dokumen ini aka
 
 ## 🛠️ Setup Environment
 
-### Pilihan 1: Python (Rekomendasi untuk Pemula)
+### Pilihan 1: Google Colab (Rekomendasi Terbaik untuk Pemula)
+
+**Google Colab** adalah platform cloud computing gratis dari Google yang sangat cocok untuk pemula karena:
+- ✅ Tidak perlu instalasi apapun
+- ✅ Gratis dan mudah diakses
+- ✅ Sudah terinstall library Python populer
+- ✅ Bisa kolaborasi real-time
+- ✅ Terintegrasi dengan Google Drive
+
+**Cara Memulai:**
+1. Buka [https://colab.research.google.com](https://colab.research.google.com)
+2. Login dengan akun Google
+3. Klik "New notebook"
+4. Mulai coding!
+
+📖 **[Baca Tutorial Lengkap Google Colab](./tutorial-google-colab/)**
+
+### Pilihan 2: Python (Install di Komputer)
 
 #### Install Python
 1. **Windows**:
@@ -73,7 +90,7 @@ echo 'print("Hello, World!")' > hello.py
 python hello.py
 ```
 
-### Pilihan 2: Java
+### Pilihan 3: Java
 
 #### Install Java Development Kit (JDK)
 1. Download JDK dari [Oracle](https://oracle.com/java) atau [OpenJDK](https://openjdk.org)
@@ -86,7 +103,7 @@ python hello.py
 - **Eclipse**
 - **VS Code** dengan extension Java
 
-### Pilihan 3: Online Platforms (Tidak Perlu Install)
+### Pilihan 4: Online Platforms (Tidak Perlu Install)
 
 **Untuk Python**:
 - [Repl.it](https://replit.com) - Full IDE online

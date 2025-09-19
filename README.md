@@ -50,6 +50,14 @@ Setelah menyelesaikan kursus ini, peserta diharapkan dapat:
 - Sorting algorithms
 - Problem solving techniques
 
+## 🚀 Tutorial Tambahan
+
+### [Tutorial: Menggunakan Python dengan Google Colab](./tutorial-google-colab/)
+- Pengenalan Google Colab dan keunggulannya
+- Setup dan penggunaan Google Colab untuk pemula
+- Contoh praktis dan latihan di Google Colab
+- Tips troubleshooting dan best practices
+
 ## 🚀 Cara Belajar
 
 1. **Ikuti urutan modul** - Setiap modul membangun konsep dari modul sebelumnya
@@ -69,6 +77,7 @@ Setelah menyelesaikan kursus ini, peserta diharapkan dapat:
 - **Text Editor**: Visual Studio Code, Sublime Text, atau Notepad++
 - **Bahasa untuk Praktik**: Python (disarankan untuk pemula), Java, atau C++
 - **Online Compiler**: Repl.it, CodePen, atau platform serupa
+- **Cloud Platform**: [Google Colab](./tutorial-google-colab/) (gratis, tanpa instalasi) - **Sangat disarankan untuk pemula**
 
 ## 🤝 Kontribusi
 
