@@ -112,8 +112,14 @@ temp/
 *.bak
 .DS_Store
 Thumbs.db
+
 modul1
 modul2
 modul3
 modul4
 modul5
+python_modules
+materi/modul2-if-else.md
+materi/modul3-match-case.md
+materi/modul4-perulangan-for.md
+materi/modul5-perulangan-while.md
