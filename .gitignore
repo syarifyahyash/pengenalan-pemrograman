@@ -112,6 +112,7 @@ temp/
 *.bak
 .DS_Store
 Thumbs.db
+*.pdf
 
 modul1
 modul2
