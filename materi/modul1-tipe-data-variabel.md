@@ -134,20 +134,25 @@ nilai = 85.7
 nilai_bulat = int(nilai)  # 85
 ```
 
+---
+
 ## 🏋️ Latihan Praktik
 
-### Latihan 1: Pembuatan Variabel Sederhana
+### 📌 Pertemuan 2: Variabel & Tipe Data Dasar
+
+#### Latihan 1: Pembuatan Variabel Sederhana
 
 **Instruksi:**
+
 1. Buat variabel untuk menyimpan data diri Anda:
-   - `nama` (string)
-   - `umur` (integer)
-   - `tinggi` (float dalam cm)
-   - `is_mahasiswa` (boolean)
+
+   * `nama` (string)
+   * `umur` (integer)
+   * `tinggi` (float dalam cm)
+   * `is_mahasiswa` (boolean)
 
 2. Tampilkan semua variabel dengan tipe datanya
 
-**Kode Template:**
 ```python
 # TODO: Buat variabel untuk data diri
 nama = 
@@ -160,23 +165,15 @@ print(f"Nama: {nama} (tipe: {type(nama).__name__})")
 # Lanjutkan untuk variabel lainnya...
 ```
 
-**Output yang Diharapkan:**
-```
-Nama: [Nama Anda] (tipe: str)
-Umur: [Umur Anda] (tipe: int)
-Tinggi: [Tinggi Anda] (tipe: float)
-Status Mahasiswa: [True/False] (tipe: bool)
-```
-
-### Latihan 2: Kalkulator Sederhana
+#### Latihan 2: Kalkulator Sederhana
 
 **Instruksi:**
 Buat program kalkulator sederhana yang:
+
 1. Meminta user memasukkan dua angka
 2. Melakukan semua operasi aritmatika
 3. Menampilkan hasil dalam format yang rapi
 
-**Kode Template:**
 ```python
 print("=== KALKULATOR SEDERHANA ===")
 
@@ -196,16 +193,12 @@ print(f"{angka1} + {angka2} = {penjumlahan}")
 # Lanjutkan untuk operasi lainnya...
 ```
 
-### Latihan 3: Profil Mahasiswa
+---
 
-**Instruksi:**
-Buat program yang:
-1. Meminta input data mahasiswa (nama, nim, jurusan, ipk)
-2. Simpan dalam dictionary
-3. Tampilkan profil lengkap
-4. Tentukan status kelulusan berdasarkan IPK (>= 2.75 lulus)
+### 📌 Pertemuan 3: Operasi & Manipulasi Data
 
-**Kode Template:**
+#### Latihan 3: Profil Mahasiswa
+
 ```python
 print("=== INPUT DATA MAHASISWA ===")
 
@@ -226,16 +219,8 @@ print(f"Nama: {mahasiswa['nama']}")
 # Lengkapi output lainnya...
 ```
 
-### Latihan 4: Manipulasi String
+#### Latihan 4: Manipulasi String
 
-**Instruksi:**
-Buat program yang:
-1. Meminta input nama lengkap
-2. Pisahkan nama depan dan belakang
-3. Tampilkan berbagai format nama
-4. Hitung statistik string
-
-**Kode Template:**
 ```python
 print("=== MANIPULASI STRING ===")
 
@@ -258,19 +243,8 @@ print(f"Jumlah karakter: {len(nama_lengkap)}")
 # Tambahkan statistik lainnya...
 ```
 
-### Latihan 5: Konversi Suhu
+#### Latihan 5: Konversi Suhu
 
-**Instruksi:**
-Buat program konversi suhu yang:
-1. Meminta input suhu dalam Celsius
-2. Konversi ke Fahrenheit dan Kelvin
-3. Tampilkan hasil dengan format yang rapi
-
-**Rumus:**
-- Fahrenheit = (Celsius × 9/5) + 32
-- Kelvin = Celsius + 273.15
-
-**Kode Template:**
 ```python
 print("=== KONVERSI SUHU ===")
 
@@ -298,14 +272,15 @@ print(f"Kategori: {kategori}")
 
 ## 🔍 Latihan Mandiri
 
-1. **Biodata Lengkap**: Buat program yang mengumpulkan biodata lengkap (nama, tanggal lahir, alamat, dll) dan menampilkannya dalam format yang menarik.
+### 📌 Pertemuan 2
 
+1. **Biodata Lengkap**: Buat program yang mengumpulkan biodata lengkap (nama, tanggal lahir, alamat, dll) dan menampilkannya dalam format yang menarik.
 2. **Kalkulator BMI**: Buat program untuk menghitung Body Mass Index berdasarkan tinggi dan berat badan.
 
+### 📌 Pertemuan 3
+
 3. **Generator Username**: Buat program yang membuat username berdasarkan nama dan tahun lahir.
-
 4. **Konverter Satuan**: Buat program untuk mengkonversi berbagai satuan (panjang, berat, volume).
-
 5. **Analisis Teks**: Buat program yang menganalisis teks (hitung kata, karakter, kalimat).
 
 ## 💡 Tips dan Best Practice
