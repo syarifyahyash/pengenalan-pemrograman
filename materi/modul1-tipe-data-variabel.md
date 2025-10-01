@@ -97,43 +97,6 @@ sisa_bagi = a % b        # 1
 pangkat = a ** b         # 1000
 ```
 
-### 4. Operasi String
-
-```python
-nama_depan = "Budi"
-nama_belakang = "Santoso"
-
-# Penggabungan string
-nama_lengkap = nama_depan + " " + nama_belakang
-# atau menggunakan f-string
-nama_lengkap = f"{nama_depan} {nama_belakang}"
-
-# Operasi string lainnya
-panjang = len(nama_lengkap)
-huruf_besar = nama_lengkap.upper()
-huruf_kecil = nama_lengkap.lower()
-```
-
-### 5. Konversi Tipe Data
-
-```python
-# String ke integer
-umur_str = "25"
-umur_int = int(umur_str)
-
-# Integer ke string
-angka = 100
-angka_str = str(angka)
-
-# String ke float
-tinggi_str = "175.5"
-tinggi_float = float(tinggi_str)
-
-# Float ke integer (dipotong)
-nilai = 85.7
-nilai_bulat = int(nilai)  # 85
-```
-
 ---
 
 ## 🏋️ Latihan Praktik
@@ -165,6 +128,11 @@ print(f"Nama: {nama} (tipe: {type(nama).__name__})")
 # Lanjutkan untuk variabel lainnya...
 ```
 
+
+---
+
+### 📌 Pertemuan 3: Operasi & Manipulasi Data
+
 #### Latihan 2: Kalkulator Sederhana
 
 **Instruksi:**
@@ -193,95 +161,15 @@ print(f"{angka1} + {angka2} = {penjumlahan}")
 # Lanjutkan untuk operasi lainnya...
 ```
 
----
-
-### 📌 Pertemuan 3: Operasi & Manipulasi Data
-
-#### Latihan 3: Profil Mahasiswa
-
-```python
-print("=== INPUT DATA MAHASISWA ===")
-
-# TODO: Input data mahasiswa
-mahasiswa = {
-    "nama": input("Nama: "),
-    "nim": input("NIM: "),
-    # Lengkapi input lainnya...
-}
-
-# TODO: Tentukan status kelulusan
-ipk = mahasiswa["ipk"]
-status = "LULUS" if ipk >= 2.75 else "TIDAK LULUS"
-
-# TODO: Tampilkan profil
-print(f"\n=== PROFIL MAHASISWA ===")
-print(f"Nama: {mahasiswa['nama']}")
-# Lengkapi output lainnya...
-```
-
-#### Latihan 4: Manipulasi String
-
-```python
-print("=== MANIPULASI STRING ===")
-
-# TODO: Input nama lengkap
-nama_lengkap = input("Masukkan nama lengkap: ")
-
-# TODO: Pisahkan nama
-nama_parts = nama_lengkap.split()
-nama_depan = nama_parts[0]
-nama_belakang = nama_parts[-1] if len(nama_parts) > 1 else ""
-
-# TODO: Format berbagai tampilan nama
-print(f"Nama Asli: {nama_lengkap}")
-print(f"Huruf Besar: {nama_lengkap.upper()}")
-# Lengkapi format lainnya...
-
-# TODO: Statistik string
-print(f"\nStatistik:")
-print(f"Jumlah karakter: {len(nama_lengkap)}")
-# Tambahkan statistik lainnya...
-```
-
-#### Latihan 5: Konversi Suhu
-
-```python
-print("=== KONVERSI SUHU ===")
-
-# TODO: Input suhu Celsius
-celsius = float(input("Masukkan suhu dalam Celsius: "))
-
-# TODO: Konversi suhu
-fahrenheit = 
-kelvin = 
-
-# TODO: Tampilkan hasil
-print(f"\nHasil Konversi:")
-print(f"{celsius}°C = {fahrenheit}°F")
-print(f"{celsius}°C = {kelvin}K")
-
-# TODO: Kategorikan suhu
-if celsius < 0:
-    kategori = "Beku"
-elif celsius < 20:
-    kategori = "Dingin"
-# Lengkapi kategorisasi...
-
-print(f"Kategori: {kategori}")
-```
-
 ## 🔍 Latihan Mandiri
 
 ### 📌 Pertemuan 2
 
 1. **Biodata Lengkap**: Buat program yang mengumpulkan biodata lengkap (nama, tanggal lahir, alamat, dll) dan menampilkannya dalam format yang menarik.
-2. **Kalkulator BMI**: Buat program untuk menghitung Body Mass Index berdasarkan tinggi dan berat badan.
 
 ### 📌 Pertemuan 3
 
-3. **Generator Username**: Buat program yang membuat username berdasarkan nama dan tahun lahir.
-4. **Konverter Satuan**: Buat program untuk mengkonversi berbagai satuan (panjang, berat, volume).
-5. **Analisis Teks**: Buat program yang menganalisis teks (hitung kata, karakter, kalimat).
+2. **Konverter Satuan**: Buat program untuk mengkonversi berbagai satuan (panjang, berat, volume) Pilih salah satu.
 
 ## 💡 Tips dan Best Practice
 
