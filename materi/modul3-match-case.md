@@ -1,35 +1,69 @@
-# Modul 3: Match-Case (Switch-Case) dalam Python 🐍
+# Modul 3: Function dan Match-Case (Switch-Case) dalam Python 🐍
 
 ## 📚 Pendahuluan
 
-**Match-Case** adalah fitur baru dalam Python 3.10+ yang menyediakan cara yang lebih elegant untuk menangani multiple kondisi dibandingkan if-elif yang panjang. Ini adalah implementasi Python untuk **pattern matching** yang mirip dengan switch-case di bahasa pemrograman lain.
+Dalam pemrograman, **fungsi (function)** digunakan untuk mengelompokkan kode agar lebih terstruktur, mudah dibaca, dan dapat digunakan kembali.
+Setelah memahami fungsi, kita juga akan belajar fitur baru Python 3.10, yaitu **match-case**, yang merupakan alternatif dari `if-elif` untuk menangani banyak kondisi dengan cara yang lebih rapi.
+
 
 ## 🎯 Tujuan Pembelajaran
 
-Setelah mempelajari modul ini, Anda akan mampu:
-1. Memahami konsep pattern matching dengan match-case
-2. Menggunakan match-case sebagai alternatif if-elif
-3. Mengimplementasikan pattern matching untuk berbagai tipe data
-4. Menangani multiple values dan guards dalam match-case
-5. Membuat fallback untuk versi Python yang lebih lama
+Setelah mempelajari modul ini, mahasiswa mampu:
+1. Memahami konsep dan manfaat fungsi dalam Python
+2. Menulis dan memanggil fungsi dengan parameter dan nilai balik
+3. Menggunakan fungsi untuk modularisasi program
+4. Memahami sintaks dan penggunaan match-case
+5. Mengombinasikan fungsi dengan match-case dalam kasus nyata
 
 ## 📖 Materi
 
-### 1. Pengenalan Match-Case
+### 1. Konsep Dasar Fungsi
 
-Match-case tersedia mulai Python 3.10. Untuk versi yang lebih lama, kita gunakan if-elif sebagai alternatif.
+Fungsi adalah blok kode yang dapat dipanggil berkali-kali.
+Gunanya: menghindari duplikasi, memecah program besar menjadi bagian kecil, dan meningkatkan keterbacaan.
 
 ```python
-import sys
-
-# Cek versi Python
-if sys.version_info >= (3, 10):
-    print("✅ Mendukung match-case")
-else:
-    print("❌ Gunakan if-elif sebagai alternatif")
+def sapa():
+    print("Halo! Selamat datang di Python!")
 ```
 
-### 2. Sintaks Dasar Match-Case
+Pemanggilan fungsi:
+
+```python
+sapa()
+```
+
+---
+
+### 2. Fungsi dengan Parameter dan Return
+
+Fungsi bisa menerima **parameter (input)** dan mengembalikan **nilai (output)**.
+
+```python
+def tambah(a, b):
+    hasil = a + b
+    return hasil
+
+print(tambah(5, 3))  # Output: 8
+```
+
+---
+
+### 3. Fungsi dengan Default Parameter
+
+Kita bisa memberikan nilai default agar parameter bersifat opsional.
+
+```python
+def sapa_nama(nama="Programmer"):
+    print(f"Halo, {nama}!")
+
+sapa_nama()          # Halo, Programmer!
+sapa_nama("Wahyu")   # Halo, Wahyu!
+```
+
+---
+
+### 4. Sintaks Dasar Match-Case
 
 ```python
 # Python 3.10+
@@ -56,7 +90,7 @@ match hari:
 print(f"Hari ke-{hari}: {nama_hari}")
 ```
 
-### 3. Alternatif dengan If-Elif
+### 5. Alternatif dengan If-Elif
 
 ```python
 # Untuk Python < 3.10
@@ -82,7 +116,7 @@ else:
 print(f"Hari ke-{hari}: {nama_hari}")
 ```
 
-### 4. Multiple Values dalam Case
+### 6. Multiple Values dalam Case
 
 ```python
 # Python 3.10+
@@ -103,7 +137,7 @@ match bulan:
 print(f"Bulan {bulan}: {musim}")
 ```
 
-### 5. Pattern Matching dengan String
+### 7. Pattern Matching dengan String
 
 ```python
 # Python 3.10+
@@ -122,7 +156,7 @@ match command.lower():
         print("❌ Perintah tidak dikenal")
 ```
 
-### 6. Pattern Matching dengan Range
+### 8. Pattern Matching dengan Range
 
 ```python
 # Python 3.10+
@@ -151,273 +185,216 @@ match nilai:
 print(f"Nilai: {nilai}, Grade: {grade}, {keterangan}")
 ```
 
-### 7. Pattern Matching dengan Tuple
-
-```python
-# Python 3.10+
-point = (0, 0)
-
-match point:
-    case (0, 0):
-        print("Origin point")
-    case (0, y):
-        print(f"On Y-axis at {y}")
-    case (x, 0):
-        print(f"On X-axis at {x}")
-    case (x, y):
-        print(f"Point at ({x}, {y})")
-    case _:
-        print("Not a point")
-```
-
 ## 🏋️ Latihan Praktik
 
-### Latihan 1: Kalkulator dengan Match-Case
+### Latihan 1: Kalkulator dengan Fungsi dan Match-Case
 
 **Instruksi:**
-Buat kalkulator yang menggunakan match-case untuk memilih operasi.
+Buat kalkulator menggunakan **fungsi** untuk perhitungan dan **match-case** untuk menentukan operasi.
 
-**Kode Template Python 3.10+:**
+**Kode Template (Python 3.10+):**
+
 ```python
-print("=== KALKULATOR MATCH-CASE ===")
+print("=== KALKULATOR DENGAN FUNGSI & MATCH-CASE ===")
 
-# TODO: Input dari user
-angka1 = float(input("Masukkan angka pertama: "))
-operasi = input("Pilih operasi (+, -, *, /): ")
-angka2 = float(input("Masukkan angka kedua: "))
+# Fungsi untuk menghitung hasil
+def hitung(angka1, angka2, operasi):
+    match operasi:
+        case "+":
+            return angka1 + angka2
+        case "-":
+            return angka1 - angka2
+        case "*":
+            return angka1 * angka2
+        case "/":
+            if angka2 != 0:
+                return angka1 / angka2
+            else:
+                return "Error: Tidak bisa dibagi nol!"
+        case _:
+            return "Operasi tidak valid!"
 
-# TODO: Implementasi match-case
-match operasi:
-    case "+":
-        hasil = angka1 + angka2
-        print(f"{angka1} + {angka2} = {hasil}")
-    case "-":
-        hasil = angka1 - angka2
-        print(f"{angka1} - {angka2} = {hasil}")
-    case "*":
-        # Lengkapi operasi lainnya...
-    case "/":
-        if angka2 != 0:
-            hasil = angka1 / angka2
-            print(f"{angka1} / {angka2} = {hasil}")
-        else:
-            print("Error: Tidak bisa dibagi nol!")
-    case _:
-        print("Operasi tidak valid!")
+# Fungsi utama kalkulator
+def kalkulator():
+    angka1 = float(input("Masukkan angka pertama: "))
+    operasi = input("Pilih operasi (+, -, *, /): ")
+    angka2 = float(input("Masukkan angka kedua: "))
+
+    hasil = hitung(angka1, angka2, operasi)
+    print(f"Hasil: {hasil}")
+
+# Jalankan program
+kalkulator()
 ```
 
-### Latihan 2: Grade Converter
+### Latihan 2: Grade Converter dengan Fungsi dan Match-Case
 
 **Instruksi:**
-Buat program yang mengkonversi nilai numerik ke grade huruf.
+Buat program yang mengonversi nilai numerik menjadi grade huruf dengan menggunakan **fungsi** dan **match-case**.
 
-**Kode Template:**
+**Kode Template (Python 3.10+):**
+
 ```python
-print("=== GRADE CONVERTER ===")
+print("=== GRADE CONVERTER DENGAN FUNGSI & MATCH-CASE ===")
 
-# TODO: Input nilai
-nilai = float(input("Masukkan nilai (0-100): "))
+# Fungsi untuk menentukan grade
+def konversi_grade(nilai):
+    match nilai:
+        case n if 90 <= n <= 100:
+            grade = "A"
+            predikat = "Excellent"
+        case n if 80 <= n < 90:
+            grade = "B"
+            predikat = "Good"
+        case n if 70 <= n < 80:
+            #Lengkapi case yang lain hingga < 10
+        case _:
+            grade = "Invalid"
+            predikat = "Nilai di luar rentang"
+    return grade, predikat
 
-# TODO: Implementasi dengan match-case (Python 3.10+)
-match nilai:
-    case n if 90 <= n <= 100:
-        grade = "A"
-        predikat = "Excellent"
-    case n if 80 <= n < 90:
-        grade = "B"
-        predikat = "Good"
-    case n if 70 <= n < 80:
-        # Lengkapi case lainnya...
-    case n if n < 0 or n > 100:
-        grade = "Invalid"
-        predikat = "Nilai di luar rentang"
-    case _:
-        grade = "E"
-        predikat = "Needs Improvement"
+# Fungsi utama
+def main():
+    nilai = float(input("Masukkan nilai (0-100): "))
+    grade, predikat = konversi_grade(nilai)
 
-print(f"Nilai: {nilai}")
-print(f"Grade: {grade}")
-print(f"Predikat: {predikat}")
+    print(f"Nilai: {nilai}")
+    print(f"Grade: {grade}")
+    print(f"Predikat: {predikat}")
+
+# Jalankan program
+main()
 ```
 
 ### Latihan 3: Menu Aplikasi Restoran
 
 **Instruksi:**
-Buat menu restoran dengan kategorisasi menggunakan match-case.
+Buat menu restoran menggunakan **fungsi** dan **match-case** untuk menampilkan kategori dan submenu.
 
-**Kode Template:**
+**Kode Template (Python 3.10+):**
+
 ```python
-print("=== MENU RESTORAN ===")
-print("1. Makanan")
-print("2. Minuman")
-print("3. Dessert")
-print("4. Keluar")
+print("=== MENU RESTORAN DENGAN FUNGSI & MATCH-CASE ===")
 
-# TODO: Input pilihan menu
-pilihan = input("Pilih kategori (1-4): ")
+# Fungsi untuk menampilkan daftar makanan
+def menu_makanan():
+    print("\n🍽️ MENU MAKANAN:")
+    print("a. Nasi Goreng - Rp 25,000")
+    print("b. Mie Ayam - Rp 20,000")
+    print("c. Gado-gado - Rp 18,000")
 
-# TODO: Implementasi match-case
-match pilihan:
-    case "1":
-        print("\n🍽️ MENU MAKANAN:")
-        print("a. Nasi Goreng - Rp 25,000")
-        print("b. Mie Ayam - Rp 20,000")
-        print("c. Gado-gado - Rp 18,000")
-        
-        submenu = input("Pilih makanan (a/b/c): ")
-        match submenu.lower():
-            case "a":
-                print("Anda memilih Nasi Goreng - Rp 25,000")
-            case "b":
-                # Lengkapi submenu lainnya...
-            case _:
-                print("Pilihan tidak valid!")
-                
-    case "2":
-        # TODO: Implementasi menu minuman
-        print("\n🥤 MENU MINUMAN:")
-        # Lengkapi...
-        
-    case "3":
-        # TODO: Implementasi menu dessert
-        print("\n🍰 MENU DESSERT:")
-        # Lengkapi...
-        
-    case "4":
-        print("Terima kasih!")
-        
-    case _:
-        print("Pilihan tidak valid!")
+    submenu = input("Pilih makanan (a/b/c): ").lower()
+    match submenu:
+        case "a":
+            print("Anda memilih Nasi Goreng - Rp 25,000")
+        case "b":
+            print("Anda memilih Mie Ayam - Rp 20,000")
+        case "c":
+            print("Anda memilih Gado-gado - Rp 18,000")
+        case _:
+            print("Pilihan tidak valid!")
+
+# Fungsi untuk menampilkan daftar minuman
+def menu_minuman():
+    print("\n🥤 MENU MINUMAN:")
+    print("a. Es Teh - Rp 8,000")
+    print("b. Jus Jeruk - Rp 12,000")
+    print("c. Kopi - Rp 10,000")
+
+    submenu = input("Pilih minuman (a/b/c): ").lower()
+    match submenu:
+        case "a":
+            print("Anda memilih Es Teh - Rp 8,000")
+        case "b":
+            print("Anda memilih Jus Jeruk - Rp 12,000")
+        case "c":
+            print("Anda memilih Kopi - Rp 10,000")
+        case _:
+            print("Pilihan tidak valid!")
+
+# Fungsi untuk menampilkan daftar dessert
+def menu_dessert():
+    print("\n🍰 MENU DESSERT:")
+    print("a. Brownies - Rp 15,000")
+    print("b. Puding - Rp 10,000")
+    print("c. Ice Cream - Rp 12,000")
+
+    submenu = input("Pilih dessert (a/b/c): ").lower()
+    match submenu:
+        case "a":
+            print("Anda memilih Brownies - Rp 15,000")
+        case "b":
+            print("Anda memilih Puding - Rp 10,000")
+        case "c":
+            print("Anda memilih Ice Cream - Rp 12,000")
+        case _:
+            print("Pilihan tidak valid!")
+
+# Fungsi utama untuk menampilkan menu utama
+def main_menu():
+    print("\n=== MENU RESTORAN ===")
+    print("1. Makanan")
+    print("2. Minuman")
+    print("3. Dessert")
+    print("4. Keluar")
+
+    pilihan = input("Pilih kategori (1-4): ")
+
+    match pilihan:
+        case "1":
+            menu_makanan()
+        case "2":
+            menu_minuman()
+        case "3":
+            menu_dessert()
+        case "4":
+            print("Terima kasih telah berkunjung! 🙏")
+        case _:
+            print("Pilihan tidak valid!")
+
+# Jalankan program
+main_menu()
 ```
 
-### Latihan 4: Status HTTP Response
+
+### Latihan 4: Game Rock Paper Scissors
 
 **Instruksi:**
-Buat program yang menjelaskan status HTTP code.
+Buat game batu-gunting-kertas yang menggunakan **fungsi** untuk modularisasi dan **match-case** untuk menentukan hasil pertandingan.
 
-**Kode Template:**
-```python
-print("=== HTTP STATUS CHECKER ===")
+**Kode Template (Python 3.10+):**
 
-# TODO: Input status code
-status_code = int(input("Masukkan HTTP status code: "))
-
-# TODO: Implementasi match-case
-match status_code:
-    case 200:
-        status = "OK"
-        description = "Request berhasil"
-    case 201:
-        status = "Created"
-        description = "Resource berhasil dibuat"
-    case 400:
-        status = "Bad Request"
-        description = "Request tidak valid"
-    case 401:
-        status = "Unauthorized"
-        description = "Tidak memiliki akses"
-    case 404:
-        status = "Not Found"
-        description = "Resource tidak ditemukan"
-    case 500:
-        status = "Internal Server Error"
-        description = "Error pada server"
-    
-    # TODO: Kategorisasi berdasarkan range
-    case code if 100 <= code < 200:
-        status = "Informational"
-        description = "Response informatif"
-    case code if 200 <= code < 300:
-        status = "Success"
-        description = "Request berhasil"
-    case code if 300 <= code < 400:
-        status = "Redirection"
-        description = "Perlu redirect"
-    case code if 400 <= code < 500:
-        status = "Client Error"
-        description = "Error dari client"
-    case code if 500 <= code < 600:
-        status = "Server Error"
-        description = "Error dari server"
-    case _:
-        status = "Unknown"
-        description = "Status code tidak dikenal"
-
-print(f"\nStatus Code: {status_code}")
-print(f"Status: {status}")
-print(f"Description: {description}")
-```
-
-### Latihan 5: Game Rock Paper Scissors
-
-**Instruksi:**
-Buat game batu-gunting-kertas dengan match-case.
-
-**Kode Template:**
 ```python
 import random
 
-print("=== ROCK PAPER SCISSORS ===")
-print("Pilihan: rock, paper, scissors")
+print("=== ROCK PAPER SCISSORS DENGAN FUNGSI & MATCH-CASE ===")
 
-# TODO: Input pilihan player
-player_choice = input("Pilihan Anda: ").lower()
+# Fungsi untuk menentukan pemenang
+def tentukan_pemenang(player_choice, computer_choice):
+    match (player_choice, computer_choice):
+        case ("rock", "scissors") | ("paper", "rock") | ("scissors", "paper"):
+            return "Anda MENANG! 🎉"
+        case ("scissors", "rock") | ("rock", "paper") | ("paper", "scissors"):
+            return "Komputer MENANG! 😢"
+        case (p, c) if p == c:
+            return "SERI! 🤝"
+        case _:
+            return "Pilihan tidak valid!"
 
-# TODO: Pilihan komputer random
-choices = ["rock", "paper", "scissors"]
-computer_choice = random.choice(choices)
+# Fungsi utama permainan
+def main():
+    print("Pilihan: rock, paper, scissors")
+    player_choice = input("Pilihan Anda: ").lower()
 
-print(f"Komputer memilih: {computer_choice}")
+    choices = ["rock", "paper", "scissors"]
+    computer_choice = random.choice(choices)
+    print(f"Komputer memilih: {computer_choice}")
 
-# TODO: Tentukan pemenang dengan match-case
-match (player_choice, computer_choice):
-    case ("rock", "scissors") | ("paper", "rock") | ("scissors", "paper"):
-        result = "Anda MENANG! 🎉"
-    case ("scissors", "rock") | ("rock", "paper") | ("paper", "scissors"):
-        result = "Komputer MENANG! 😢"
-    case (p, c) if p == c:
-        result = "SERI! 🤝"
-    case _:
-        result = "Pilihan tidak valid!"
+    hasil = tentukan_pemenang(player_choice, computer_choice)
+    print(hasil)
 
-print(result)
-```
-
-### Latihan 6: Konverter Hari dalam Bahasa
-
-**Instruksi:**
-Buat program yang mengkonversi nama hari dalam berbagai bahasa.
-
-**Kode Template:**
-```python
-print("=== KONVERTER HARI ===")
-
-# TODO: Input hari dan bahasa
-hari = input("Masukkan hari (1-7): ")
-bahasa = input("Pilih bahasa (id/en/ar): ").lower()
-
-# TODO: Implementasi match-case dengan nested pattern
-match (hari, bahasa):
-    case ("1", "id"):
-        hasil = "Senin"
-    case ("1", "en"):
-        hasil = "Monday"
-    case ("1", "ar"):
-        hasil = "الاثنين"
-    case ("2", "id"):
-        hasil = "Selasa"
-    case ("2", "en"):
-        hasil = "Tuesday"
-    # TODO: Lengkapi kombinasi lainnya...
-    
-    case (d, l) if d not in ["1", "2", "3", "4", "5", "6", "7"]:
-        hasil = "Hari tidak valid (1-7)"
-    case (d, l) if l not in ["id", "en", "ar"]:
-        hasil = "Bahasa tidak tersedia"
-    case _:
-        hasil = "Kombinasi tidak ditemukan"
-
-print(f"Hasil: {hasil}")
+# Jalankan game
+main()
 ```
 
 ## 🔍 Latihan Mandiri
