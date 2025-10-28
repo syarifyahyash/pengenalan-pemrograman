@@ -45,7 +45,7 @@ def tambah(a, b):
     hasil = a + b
     return hasil
 
-print(tambah(5, 3))  # Output: 8
+print(tambah(5, 3))
 ```
 
 ---
@@ -58,8 +58,8 @@ Kita bisa memberikan nilai default agar parameter bersifat opsional.
 def sapa_nama(nama="Programmer"):
     print(f"Halo, {nama}!")
 
-sapa_nama()          # Halo, Programmer!
-sapa_nama("Wahyu")   # Halo, Wahyu!
+sapa_nama()          
+sapa_nama("Wahyu")   
 ```
 
 ---
