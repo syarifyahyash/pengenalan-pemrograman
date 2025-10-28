@@ -17,6 +17,7 @@ Setelah mempelajari modul ini, mahasiswa mampu:
 
 ## 📖 Materi
 
+### 📌 Pertemuan 6
 ### 1. Konsep Dasar Fungsi
 
 Fungsi adalah blok kode yang dapat dipanggil berkali-kali.
@@ -62,6 +63,7 @@ sapa_nama("Wahyu")   # Halo, Wahyu!
 ```
 
 ---
+
 
 ### 4. Sintaks Dasar Match-Case
 
@@ -116,6 +118,7 @@ else:
 print(f"Hari ke-{hari}: {nama_hari}")
 ```
 
+### 📌 Pertemuan 7
 ### 6. Multiple Values dalam Case
 
 ```python
@@ -187,12 +190,13 @@ print(f"Nilai: {nilai}, Grade: {grade}, {keterangan}")
 
 ## 🏋️ Latihan Praktik
 
+### 📌 Pertemuan 6
 ### Latihan 1: Kalkulator dengan Fungsi dan Match-Case
 
 **Instruksi:**
 Buat kalkulator menggunakan **fungsi** untuk perhitungan dan **match-case** untuk menentukan operasi.
 
-**Kode Template (Python 3.10+):**
+**Kode Template:**
 
 ```python
 print("=== KALKULATOR DENGAN FUNGSI & MATCH-CASE ===")
@@ -203,9 +207,7 @@ def hitung(angka1, angka2, operasi):
         case "+":
             return angka1 + angka2
         case "-":
-            return angka1 - angka2
-        case "*":
-            return angka1 * angka2
+            #Lengkapi
         case "/":
             if angka2 != 0:
                 return angka1 / angka2
@@ -232,7 +234,7 @@ kalkulator()
 **Instruksi:**
 Buat program yang mengonversi nilai numerik menjadi grade huruf dengan menggunakan **fungsi** dan **match-case**.
 
-**Kode Template (Python 3.10+):**
+**Kode Template:**
 
 ```python
 print("=== GRADE CONVERTER DENGAN FUNGSI & MATCH-CASE ===")
@@ -266,12 +268,13 @@ def main():
 main()
 ```
 
+### 📌 Pertemuan 7
 ### Latihan 3: Menu Aplikasi Restoran
 
 **Instruksi:**
 Buat menu restoran menggunakan **fungsi** dan **match-case** untuk menampilkan kategori dan submenu.
 
-**Kode Template (Python 3.10+):**
+**Kode Template:**
 
 ```python
 print("=== MENU RESTORAN DENGAN FUNGSI & MATCH-CASE ===")
@@ -282,15 +285,15 @@ def menu_makanan():
     print("a. Nasi Goreng - Rp 25,000")
     print("b. Mie Ayam - Rp 20,000")
     print("c. Gado-gado - Rp 18,000")
+    print("d. Rujak Kelang - Rp 15,000")
+    print("e. Nasi Rames - Rp 10,000")
 
     submenu = input("Pilih makanan (a/b/c): ").lower()
     match submenu:
         case "a":
             print("Anda memilih Nasi Goreng - Rp 25,000")
-        case "b":
-            print("Anda memilih Mie Ayam - Rp 20,000")
-        case "c":
-            print("Anda memilih Gado-gado - Rp 18,000")
+        case "b": 
+            #Lengkapi
         case _:
             print("Pilihan tidak valid!")
 
@@ -300,33 +303,15 @@ def menu_minuman():
     print("a. Es Teh - Rp 8,000")
     print("b. Jus Jeruk - Rp 12,000")
     print("c. Kopi - Rp 10,000")
+    print("d. Teh Hangat - Rp 8,000")
+    print("e. Pop Ice - Rp 5,000")
 
     submenu = input("Pilih minuman (a/b/c): ").lower()
     match submenu:
         case "a":
             print("Anda memilih Es Teh - Rp 8,000")
         case "b":
-            print("Anda memilih Jus Jeruk - Rp 12,000")
-        case "c":
-            print("Anda memilih Kopi - Rp 10,000")
-        case _:
-            print("Pilihan tidak valid!")
-
-# Fungsi untuk menampilkan daftar dessert
-def menu_dessert():
-    print("\n🍰 MENU DESSERT:")
-    print("a. Brownies - Rp 15,000")
-    print("b. Puding - Rp 10,000")
-    print("c. Ice Cream - Rp 12,000")
-
-    submenu = input("Pilih dessert (a/b/c): ").lower()
-    match submenu:
-        case "a":
-            print("Anda memilih Brownies - Rp 15,000")
-        case "b":
-            print("Anda memilih Puding - Rp 10,000")
-        case "c":
-            print("Anda memilih Ice Cream - Rp 12,000")
+            #Lengkapi
         case _:
             print("Pilihan tidak valid!")
 
@@ -335,10 +320,9 @@ def main_menu():
     print("\n=== MENU RESTORAN ===")
     print("1. Makanan")
     print("2. Minuman")
-    print("3. Dessert")
-    print("4. Keluar")
+    print("3. Keluar")
 
-    pilihan = input("Pilih kategori (1-4): ")
+    pilihan = input("Pilih kategori (1-3): ")
 
     match pilihan:
         case "1":
@@ -346,8 +330,6 @@ def main_menu():
         case "2":
             menu_minuman()
         case "3":
-            menu_dessert()
-        case "4":
             print("Terima kasih telah berkunjung! 🙏")
         case _:
             print("Pilihan tidak valid!")
@@ -362,7 +344,7 @@ main_menu()
 **Instruksi:**
 Buat game batu-gunting-kertas yang menggunakan **fungsi** untuk modularisasi dan **match-case** untuk menentukan hasil pertandingan.
 
-**Kode Template (Python 3.10+):**
+**Kode Template:**
 
 ```python
 import random
@@ -399,17 +381,54 @@ main()
 
 ## 🔍 Latihan Mandiri
 
-1. **ATM Menu System**: Buat sistem menu ATM lengkap dengan match-case.
+### 📌 Pertemuan 6
+### 🌡️ **1. Konverter Suhu Universal**
 
-2. **Unit Converter**: Buat konverter satuan (panjang, berat, suhu) dengan menu match-case.
+**Deskripsi:**
+Buat program konversi suhu dengan **fungsi** dan **match-case**.
+Program ini harus mengonversi suhu antar skala berikut:
 
-3. **Text Adventure Game**: Buat game petualangan sederhana dengan pilihan menggunakan match-case.
+* Celsius ↔ Fahrenheit
+* Celsius ↔ Kelvin
+* Fahrenheit ↔ Kelvin
 
-4. **Grade Calculator**: Buat kalkulator nilai dengan bobot yang berbeda untuk setiap komponen.
+**Fitur yang Diharapkan:**
 
-5. **Currency Converter**: Buat konverter mata uang dengan rate yang berbeda.
+* Input suhu dan jenis konversi dari pengguna
+* Untuk nilai suhu gunakan 2 digit terakhir NIM. Contoh: 2025520030 => 30
+* Gunakan fungsi `konversi_suhu(nilai, dari, ke)`
+* Gunakan match-case untuk menangani kombinasi konversi
 
-6. **Weather Response**: Buat program yang memberikan saran aktivitas berdasarkan cuaca.
+**Contoh Output:**
+
+```
+Masukkan suhu: 30
+Dari satuan (C/F/K): C
+Ke satuan (C/F/K): F
+Hasil: 86°F
+```
+
+---
+
+### 📌 Pertemuan 7
+### 🏦 **2. Sistem ATM Sederhana**
+
+**Deskripsi:**
+Buat simulasi mesin ATM yang menggunakan **fungsi** dan **match-case**.
+Program meminta PIN, lalu menampilkan menu transaksi seperti *Cek Saldo, Tarik Tunai, Setor Tunai,* dan *Keluar.*
+
+**Fitur yang Diharapkan:**
+
+* Validasi PIN gunakan 4 digit terakhir NIM (contoh: PIN = 0030)
+* Gunakan fungsi `cek_saldo()`, `tarik_tunai()`, dan `setor_tunai()`
+* Gunakan match-case untuk navigasi menu utama
+
+**Petunjuk:**
+
+* Tampilkan saldo setelah setiap transaksi
+* Jika saldo tidak mencukupi, tampilkan pesan kesalahan
+
+---
 
 ## 💡 Tips dan Best Practice
 
@@ -476,6 +495,3 @@ Setelah menguasai materi ini, Anda siap untuk mempelajari:
 
 ---
 
-**💻 Untuk menjalankan contoh kode:** Jalankan file `python_modules/modul3_match_case.py`
-
-**🎯 Target:** Pahami pattern matching sebelum melanjutkan ke konsep perulangan!
