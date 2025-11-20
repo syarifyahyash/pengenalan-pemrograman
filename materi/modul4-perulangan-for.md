@@ -101,7 +101,6 @@ for value in mahasiswa.values():
     print(value)
 ```
 
-### 📌 Pertemuan 10
 ### 6. Nested Loops (Perulangan Bersarang)
 
 ```python
@@ -113,6 +112,7 @@ for i in range(1, 4):
     print()  # Baris kosong setelah setiap i
 ```
 
+### 📌 Pertemuan 10
 ### 7. Break dan Continue
 
 ```python
