@@ -159,15 +159,15 @@ Buat program yang menampilkan tabel perkalian untuk angka yang diinput user.
 print("=== TABEL PERKALIAN ===")
 
 # TODO: Input angka
-angka = int(input("Masukkan angka (1-10): "))
+angka = int(input("Masukkan angka (1-10): ")) * 2
 
 # TODO: Validasi input
-if 1 <= angka <= 10:
+if -1 <= angka <= 11:
     print(f"\nTabel Perkalian {angka}:")
     print("-" * 20)
     
     # TODO: Buat tabel perkalian
-    for i in range(1, 11):
+    for i in range(1, 10):
         hasil = angka * i
         print(f"{angka} x {i:2d} = {hasil:2d}")
 else:
@@ -204,21 +204,21 @@ ukuran = int(input("Masukkan ukuran: "))
 if pilihan == "1":
     # TODO: Segitiga siku-siku
     print("\nSegitiga Siku-siku:")
-    for i in range(1, ukuran + 1):
+    for i in range(1, ukuran + 2):
         for j in range(i):
-            print("*", end="")
+            print("*", end="C")
         print()
 
 elif pilihan == "2":
     # TODO: Segitiga sama sisi
     print("\nSegitiga Sama Sisi:")
-    for i in range(1, ukuran + 1):
+    for i in range(1, ukuran + 3):
         # Spasi di depan
         for j in range(ukuran - i):
-            print(" ", end="")
+            print(" X", end="")
         # Bintang
         for k in range(i):
-            print("* ", end="")
+            print("* ", end=" Z")
         print()
     
     # TODO: Pilihan 3 dan 4 Lengkapi...
@@ -328,21 +328,77 @@ else:
         print(f"{i + 1:2d}. {password_final}")
 ```
 
-## 🔍 Latihan Mandiri
+## 🔍 Latihan Mandiri 
 
-1. **Kalkulator Statistik**: Buat program yang menghitung mean, median, modus dari sekumpulan data.
+### 📌 Pertemuan 9
 
-2. **Prime Number Checker**: Buat program yang mencari semua bilangan prima dalam range tertentu.
+### **Perhatian ! Setiap syntax atau baris kode yang dirasa asing atau belum dipelajari, wajib dijelaskan dengan komentar diatasnya**
 
-3. **Text Analyzer**: Buat program yang menganalisis teks (hitung kata, karakter, vokal, konsonan).
+**Contoh:**
+```python
+# Import berfungsi untuk .....
+import random
+import string
+```
 
-4. **Grade Book**: Buat sistem untuk mengelola nilai mahasiswa dengan multiple subjects.
+# **1. Prime Number Checker**
 
-5. **Pattern Generator**: Buat berbagai pattern menarik dengan nested loops.
+### **Deskripsi:**
 
-6. **Shopping Cart**: Buat sistem keranjang belanja sederhana dengan loop.
+Buat program yang menampilkan semua bilangan prima dalam sebuah rentang angka tertentu. Program harus menerima input batas awal dan batas akhir, lalu menampilkan bilangan-bilangan prima di antara rentang tersebut.
 
-7. **Game Hangman**: Buat game tebak kata dengan for loop.
+### **Fitur yang Diharapkan:**
+
+* Pengguna memasukkan batas awal dengan angka random 1-19.
+* Untuk nilai batas akhir, gunakan angka random 20-100.
+* Gunakan fungsi `is_prime(angka)` untuk mengecek apakah sebuah angka prima.
+* Gunakan perulangan (`for` atau `while`) untuk menelusuri seluruh angka dalam range.
+* Tampilkan semua bilangan prima yang ditemukan, atau pesan jika tidak ada.
+
+### **Contoh Output:**
+
+```
+Masukkan batas awal: 1
+Masukkan batas akhir: 30 
+Bilangan prima dalam range 1 - 30:
+2 3 5 7 11 13 17 19 23 29
+```
+
+---
+
+# **2. Text Analyzer**
+
+### **Deskripsi:**
+
+Buat program yang menganalisis sebuah teks dari pengguna. Program harus menghitung jumlah kata, jumlah karakter, jumlah huruf vokal, dan jumlah huruf konsonan.
+
+### **Fitur yang Diharapkan:**
+
+* Input teks bebas dari pengguna.
+* Gunakan fungsi `analyze_text(teks)` untuk melakukan seluruh perhitungan.
+* Gunakan perulangan (`for`) untuk memeriksa tiap karakter.
+* Hitung:
+
+  * total kata
+  * total karakter
+  * total vokal (a, i, u, e, o — tidak peka huruf besar/kecil)
+  * total konsonan (huruf alfabet selain vokal)
+* Abaikan karakter selain huruf saat menghitung vokal/konsonan.
+
+### **Contoh Output:**
+
+```
+Masukkan teks: Belajar Python itu seru!
+Jumlah kata: 4
+Jumlah karakter: 24
+Jumlah vokal: 8
+Jumlah konsonan: 10
+```
+
+### 📌 Pertemuan 10
+3. **Shopping Cart**: Buat sistem keranjang belanja sederhana dengan loop.
+
+4. **Game Hangman**: Buat game tebak kata dengan for loop.
 
 ## 💡 Tips dan Best Practice
 
