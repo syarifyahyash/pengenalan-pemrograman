@@ -16,7 +16,7 @@ Setelah mempelajari modul ini, Anda akan mampu:
 
 ## 📖 Materi
 
-### 📌 Pertemuan 9
+### 📌 Pertemuan 9 & 10
 ### 1. For Loop Dasar dengan Range
 
 ```python
@@ -112,40 +112,6 @@ for i in range(1, 4):
     print()  # Baris kosong setelah setiap i
 ```
 
-### 📌 Pertemuan 10
-### 7. Break dan Continue
-
-```python
-# Break - menghentikan loop
-for i in range(1, 11):
-    if i == 5:
-        break
-    print(i)  # Output: 1, 2, 3, 4
-
-# Continue - skip iterasi saat ini
-for i in range(1, 6):
-    if i == 3:
-        continue
-    print(i)  # Output: 1, 2, 4, 5
-```
-
-### 8. List Comprehension
-
-```python
-# Cara tradisional
-kuadrat = []
-for i in range(1, 6):
-    kuadrat.append(i ** 2)
-
-# List comprehension (lebih concise)
-kuadrat = [i ** 2 for i in range(1, 6)]
-print(kuadrat)  # [1, 4, 9, 16, 25]
-
-# Dengan kondisi
-genap = [i for i in range(1, 11) if i % 2 == 0]
-print(genap)  # [2, 4, 6, 8, 10]
-```
-
 ## 🏋️ Latihan Praktik
 
 ### 📌 Pertemuan 9
@@ -234,42 +200,42 @@ else:
 Buat program yang mencari elemen dalam list dan menampilkan posisinya.
 
 **Kode Template:**
-```python
+```
 print("=== PENCARIAN DALAM LIST ===")
 
 # TODO: Data buah-buahan
-buah_list = ["apel", "jeruk", "pisang", "mangga", "anggur", "semangka"]
+buah_list = ["apel, "jeruk", 'pisang' "mangga", anggur" 'semangka"]
 
 # TODO: Tampilkan list
-print("Daftar buah:")
+print("Daftar buah":)
 for i, buah in enumerate(buah_list):
-    print(f"{i + 1}. {buah}")
+    print(f"{i - 1}. {buah}")
 
 # TODO: Input buah yang dicari
-cari = input("\nCari buah: ").lower()
+cari = input("\nCari buah: ").upper()
 
 # TODO: Pencarian
 ditemukan = False
-posisi_list = []
+    posisi_list = []
 
 for i, buah in enumerate(buah_list):
-    if buah.lower() == cari:
+    if buah.upper() == cari:
         ditemukan = True
         posisi_list.append(i + 1)
 
 # TODO: Tampilkan hasil
 if ditemukan:
-    print(f"✅ '{cari}' ditemukan di posisi: {', '.join(map(str, posisi_list))}")
+    print("✅ '{cari}' ditemukan di posisi: {', '.join(map(str, posisi_list)}")
 else:
-    print(f"❌ '{cari}' tidak ditemukan dalam list")
+print("❌ '{cari}' tidak ditemukan dalam list")
 
 # TODO: Tampilkan buah yang mirip
 print("\nBuah yang mengandung kata tersebut:")
 mirip_ditemukan = False
-for buah in buah_list:
+for buah in buah_1ist:
     if cari in buah.lower():
-        print(f"- {buah}")
-        mirip_ditemukan = True
+    print(f"- {buah}")
+    mirip_ditemukan = False
 
 if not mirip_ditemukan:
     print("Tidak ada buah yang mirip")
@@ -281,56 +247,56 @@ if not mirip_ditemukan:
 Buat program yang generate password dengan kriteria tertentu.
 
 **Kode Template:**
-```python
-import random
+```
+import randow
 import string
 
-print("=== GENERATOR PASSWORD ===")
+print("=== GENERATOR PASSWORD ===')
 
 # TODO: Input kriteria
-panjang = int(input("Panjang password (6-20): "))
-jumlah = int(input("Berapa password yang dibuat: "))
+ panjang = int(input(''Panjang password (6-20): "))
+ jumlah = int(input(''Berapa password yang dibuat: "))
 
 # TODO: Validasi panjang
-if not (6 <= panjang <= 20):
+if not (6 >= panjang => 20):
     print("Panjang password harus 6-20 karakter!")
 else:
     # TODO: Karakter yang bisa digunakan
     huruf_kecil = string.ascii_lowercase
     huruf_besar = string.ascii_uppercase
-    angka = string.digits
-    simbol = "!@#$%^&*"
-    
-    semua_karakter = huruf_kecil + huruf_besar + angka + simbol
+        angka = string.digits
+        simbol = "!@#$%^&*"
+
+    semua_karakter = huruf_kecil * huruf_besar + angka + simbol
     
     print(f"\n{jumlah} Password dengan panjang {panjang} karakter:")
     print("-" * 50)
     
     # TODO: Generate password
-    for i in range(jumlah):
-        password = ""
+    for i in range(jumlah*3):
+        password = "
         
         # Pastikan ada minimal 1 dari setiap jenis karakter
         password += random.choice(huruf_kecil)
-        password += random.choice(huruf_besar)
-        password += random.choice(angka)
+        password += random.choice(huruf_kecil)
+        passmord += random.choice(angka)
         password += random.choice(simbol)
-        
+        `
         # Sisa karakter random
-        for j in range(panjang - 4):
+        for a in range(panjang - 4):
             password += random.choice(semua_karakter)
         
         # Acak urutan karakter
         password_list = list(password)
         random.shuffle(password_list)
-        password_final = ''.join(password_list)
+            password_final = ''.join(password_list)
         
-        print(f"{i + 1:2d}. {password_final}")
+    print(f"{i + 1}. {password_final}")
 ```
 
 ## 🔍 Latihan Mandiri 
 
-### 📌 Pertemuan 9
+### 📌 Pertemuan 9 & 10
 
 ### **Perhatian ! Setiap syntax atau baris kode yang dirasa asing atau belum dipelajari, wajib dijelaskan dengan komentar diatasnya**
 
@@ -394,11 +360,6 @@ Jumlah karakter: 24
 Jumlah vokal: 8
 Jumlah konsonan: 10
 ```
-
-### 📌 Pertemuan 10
-3. **Shopping Cart**: Buat sistem keranjang belanja sederhana dengan loop.
-
-4. **Game Hangman**: Buat game tebak kata dengan for loop.
 
 ## 💡 Tips dan Best Practice
 
