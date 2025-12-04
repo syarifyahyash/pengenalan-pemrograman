@@ -168,6 +168,7 @@ print("\n👋 Terima kasih sudah menggunakan sistem!")
 
 ```
 
+### 📌 Pertemuan 12
 ### Latihan 2: Petualangan Dungeon (Mini RPG)
 
 **Instruksi:**
