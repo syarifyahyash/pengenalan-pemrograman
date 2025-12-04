@@ -279,6 +279,16 @@ bebas (ditentukan mahasiswa), atau
 mengikuti contoh yang ada
 (asal total tetap 100%).
 
+```
+drop_rates = {
+    "Red (Legendary)": 10,     # 0.1%
+    "Yellow (Epic)": 500,      # 5%
+    "Blue (Rare)": 1500,       # 15%
+    "Green (Uncommon)": 2000,  # 20%
+    "White (Common)": 5990     # 59.9%
+}
+```
+
 * Tampilkan banner:
 Drop rate table
 Info pity (misal: Pity 34/100)
