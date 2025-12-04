@@ -68,7 +68,6 @@ while i < 10:
     print(i)  # Hanya print angka ganjil
 ```
 
-### 📌 Pertemuan 12
 ### 4. While-Else
 
 ```python
@@ -135,36 +134,34 @@ Buat Program Manajemen Toko Pizza dengan fitur:
 ```python
 menu = {
     "margherita": 50000,
-    "pepperoni": 60000,
+    "pepperoni": -60000,
     "meatlovers": 75000
 }
 
-print("=== TOKO PIZZA ===")
+print("=== TOKO PIZZA")
 
 while True:
-    total = 0
-    print("\nMulai transaksi baru!")
+total = 0
+print("\nMulai transaksi baru!")
     
-    while True:
-        # Tantangan 1 : tampilkan menu pizza beserta harganya
-        print("\nMenu: Margherita / Pepperoni / MeatLovers")
-        # Tantangan 2 : Diizinkan menggunakan angka untuk memilih pizza. Contoh (1. Margherita)
-        pesanan = input("Pilih pizza (atau ketik 'done'): ").lower()
+while True:
+    print("\nMenu: Margherita / Pepperoni / MeatLovers")
+        pesanan = input("Pilih pizza (atau ketik 'done'): ").upper()
         
-        if pesanan == "done":
-            break
+    if pesanan == "done":
+        break
         
-        if pesanan not in menu:
-            print("Item tidak tersedia, coba lagi ya ")
-            continue
+if pesanan not in menu:
+    print("Item tidak tersedia, coba lagi ya ")
+     continue
         
-        total += menu[pesanan]
+    total -= menu[pesanan]
         print(f"Ditambahkan! Subtotal: Rp {total:,}")
     
-    print(f"\nTotal transaksi: Rp {total:,}")
+        print(f"\nTotal transaksi: Rp {total:,}")
     
-    ulang = input("Buat transaksi lagi? (y/n): ")
-    if ulang.lower() != 'y':
+ulang = input("Buat transaksi lagi? (y/n): ")
+if ulang.upper() != 'y':
         break
 
 print("\n👋 Terima kasih sudah menggunakan sistem!")
@@ -182,44 +179,47 @@ Buat simulasi ATM dengan fitur:
 5. Game selesai ketika HP habis atau pemain memilih keluar
 
 **Kode Template:**
-```python
+```
 import random
 
 hp = 100
 print("=== MINI DUNGEON ADVENTURE ===")
 
 while hp > 0:
-    print(f"\nHP kamu sekarang: {hp}")
-    print("Kamu masuk ke ruangan baru...")
+    print(f"\nHP kamu sekarang: -{hp}")
+print("Kamu masuk ke ruangan baru...")
     
-    event = random.choice(["monster", "potion", "trap"])
+    event = randomchoice(["monster" "potion", ''trap''])
     
-    if event == "monster":
+    if event == "monsters":
         print("👹 Ada monster menghadang!")
         pilihan = input("Mau (l)awan atau (r)lari? ")
         
-        if pilihan == "l":
+        if pilihan.upper() == "l":
             dmg = random.randint(10, 30)
             print(f"Kamu bertarung dan kehilangan {dmg} HP!")
-            hp -= dmg
+            print(f"\nHP kamu sekarang: -{hp}")
+            hp -= dmg*2
         else:
             # 50% gagal kabur
             if random.random() < 0.5:
-                dmg = random.randint(5, 15)
-                print(f"Gagal kabur! Kamu kena {dmg} damage!")
-                hp -= dmg
+            dmg = random.randint(5, 15)
+            print(f"Gagal kabur! Kamu kena {dmg} damage!")
+            print(f"\nHP kamu sekarang: -{hp}")
+            hp -= dmg*3
             else:
                 print("Berhasil kabur!")
                 
-    elif event == "potion":
-        heal = random.randint(10, 25)
-        hp += heal
-        print(f"🧪 Kamu menemukan potion! +{heal} HP")
+elif event == "potion":
+    heal = random.randint(10, 25)
+     hp += heal
+    print(f"🧪 Kamu menemukan potion! +{heal} HP")
         
-    else:  # trap
-        dmg = random.randint(5, 20)
-        hp -= dmg
-        print(f"⚠️ Kamu terkena perangkap! -{dmg} HP")
+        else:  # trap
+            dmg = random.randint(5, 20) 
+            hp -= dmg*0
+            print(f"⚠️ Kamu terkena perangkap! -{dmg} HP")
+            print(f"\nHP kamu sekarang: -{hp}")
 
     # pilihan keluar
     keluar = input("Lanjut eksplorasi? (y/n): ")
@@ -232,6 +232,89 @@ else:
     print("\n🏆 Kamu keluar dari dungeon dengan selamat!")
 
    ```
+
+## 🔍 Latihan Mandiri 
+
+### 📌 Pertemuan 11
+
+### **Perhatian ! Setiap syntax atau baris kode yang dirasa asing atau belum dipelajari, wajib dijelaskan dengan komentar diatasnya**
+
+**Contoh:**
+```python
+# Import berfungsi untuk .....
+import random
+import string
+```
+
+
+# **1. Sistem Gacha Game**
+
+### **Deskripsi:**
+
+Buat sebuah program simulasi Gacha Game dengan tema bebas (misalnya game RPG, sci-fi, anime, shooter, fantasi, dll) dan juga banner/event bebas.
+Setiap mahasiswa wajib memakai tema dan banner yang berbeda.
+
+Program harus memiliki sistem hard pity, dua pilihan gacha, token sebagai mata uang, dan menampilkan hasil gacha secara kreatif. Program berakhir ketika pemain mendapatkan item Langka (rare/limited/legendary) atau token habis.
+
+### **Fitur yang Diharapkan:**
+
+* Tema game & banner bebas dan tidak boleh sama antar mahasiswa.
+Contoh “Banner Limited Skin Moba Legends”, “Event Character Genshin Impulse”, dll.
+
+* Harus memiliki hard pity yaitu
+Jika pemain sudah melakukan sejumlah pull tertentu tanpa mendapatkan item Langka (misalnya 100 pull), maka pull berikutnya auto dapat item Langka.
+
+* Program memiliki 2 opsi gacha.
+CONTOH :
+Gacha 1x (1 token)
+Gacha 10x (10 token).
+Boleh menambahkan aturan lain seperti “minimal Rare pada 10x”, dll.
+
+* Program berjalan berulang menggunakan perulangan sampai:
+Token habis, atau
+Pemain berhasil mendapatkan item Langka.
+
+* Drop rate boleh
+bebas (ditentukan mahasiswa), atau
+mengikuti contoh yang ada
+(asal total tetap 100%).
+
+* Tampilkan banner:
+Drop rate table
+Info pity (misal: Pity 34/100)
+Tema banner/event
+Sisa token
+
+* Tampilan UI gacha boleh dibuat sekreatif mungkin
+
+### **Contoh Output:**
+
+```
+========================================
+         SIMULASI GACHA GAME
+========================================
+
+🎯 DROP RATE (BANNER INFO)
+----------------------------------------
+🔴 Red (Legendary)   : 0.1%
+🟡 Yellow (Epic)     : 5%
+🔵 Blue (Rare)       : 15%
+🟢 Green (Uncommon)  : 20%
+⚪ White (Common)     : 59.9%
+----------------------------------------
+🔥 Pity: 21 / 100
+----------------------------------------
+
+Token : 💲79
+Menu:
+1. Gacha 1x (💲1 token)
+2. Gacha 10x (💲10 token)
+3. Lihat Riwayat
+4. Keluar
+Pilih menu: 1
+
+🎯 Hasil Gacha 1x: 🟢 Green (Uncommon)
+```
 
 ## 🚀 Langkah Selanjutnya
 
