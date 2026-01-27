@@ -11,7 +11,9 @@ Repositori ini berisi materi pembelajaran pengenalan pemrograman menggunakan bah
 - **Modul 4**: Perulangan For
 - **Modul 5**: Perulangan While
 
-### 📖 Materi Markdown Interaktif (BARU!)
+### 📖 Materi Markdown Interaktif
+
+#### Materi Dasar (Beginner)
 - **[materi/](./materi/)**: Berisi materi pembelajaran dalam format markdown dengan latihan praktik lengkap
 - **[materi/README.md](./materi/README.md)**: Panduan lengkap dan progress tracker
 - **[Modul 1: Tipe Data & Variabel](./materi/modul1-tipe-data-variabel.md)**
@@ -20,14 +22,23 @@ Repositori ini berisi materi pembelajaran pengenalan pemrograman menggunakan bah
 - **[Modul 4: Perulangan For](./materi/modul4-perulangan-for.md)**
 - **[Modul 5: Perulangan While](./materi/modul5-perulangan-while.md)**
 
+#### Materi Expert (Advanced) 🚀
+- **[Modul 6: Functions & Modules (Expert)](./materi/modul6-functions-modules.md)** - Lambda, Higher-Order Functions, Decorators Dasar, Modules
+- **[Modul 7: Object-Oriented Programming](./materi/modul7-oop.md)** - Classes, Inheritance, Polymorphism, Design Patterns
+- **[Modul 8: File I/O & Exception Handling](./materi/modul8-file-io-exceptions.md)** - File Operations, CSV/JSON, Custom Exceptions, Context Managers
+- **[Modul 9: Decorators & Context Managers](./materi/modul9-decorators-context-managers.md)** - Advanced Decorators, Custom Context Managers
+- **[Modul 10: Generators & Iterators](./materi/modul10-generators-iterators.md)** - Generators, Iterators, itertools, Lazy Evaluation
+- **[Modul 11: Asynchronous Programming](./materi/modul11-async-programming.md)** - Async/Await, Asyncio, Concurrent Programming
+
 ## 🎯 Fitur Utama
 
 - **Interaktif**: Semua modul dapat dijalankan dan dimodifikasi
-- **Progresif**: Materi disusun dari dasar hingga menengah
+- **Progresif**: Materi disusun dari dasar hingga expert level
 - **Praktis**: Banyak latihan dan contoh real-world
 - **Lengkap**: Kombinasi teori (PDF), materi markdown interaktif, dan praktek (Python)
 - **Fleksibel**: Dapat dipelajari per modul atau keseluruhan
 - **📖 Markdown Materials**: Materi pembelajaran komprehensif dengan latihan praktik terintegrasi
+- **🚀 Expert Level Content**: Materi advanced untuk developer yang ingin mendalami Python
 
 ## 👨‍💻 Penulis
 
