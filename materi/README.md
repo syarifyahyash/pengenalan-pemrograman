@@ -110,9 +110,136 @@ Selamat datang di koleksi materi pembelajaran pemrograman Python! Setiap modul t
 
 ---
 
+## 🚀 Materi Expert Level (Advanced)
+
+### [🔥 Modul 6: Functions & Modules (Expert)](./modul6-functions-modules.md)
+
+**Yang Dipelajari:**
+- Lambda functions dan anonymous functions
+- Higher-order functions (map, filter, reduce)
+- Closures dan variable scope
+- Decorators dasar
+- *args dan **kwargs
+- Recursive functions dengan memoization
+- Module dan package organization
+
+**Latihan Praktik:**
+- Data processing pipeline
+- Decorator untuk caching
+- Function factory pattern
+- Advanced calculator module
+
+---
+
+### [🎯 Modul 7: Object-Oriented Programming (OOP)](./modul7-oop.md)
+
+**Yang Dipelajari:**
+- Classes dan objects
+- Encapsulation dan property decorators
+- Inheritance (single dan multiple)
+- Polymorphism dan abstraction
+- Special methods (magic methods)
+- Class methods dan static methods
+- Abstract base classes
+- Design patterns (Singleton, Factory, Observer)
+- SOLID principles
+
+**Latihan Praktik:**
+- Library management system
+- E-commerce product system
+- Vehicle hierarchy dengan inheritance
+- Design pattern implementations
+
+---
+
+### [📁 Modul 8: File I/O & Exception Handling](./modul8-file-io-exceptions.md)
+
+**Yang Dipelajari:**
+- File operations (read, write, append)
+- Working dengan CSV dan JSON files
+- Binary file operations
+- File path operations (os.path dan pathlib)
+- Exception handling (try-except-else-finally)
+- Custom exceptions
+- Context managers
+- Error handling best practices
+
+**Latihan Praktik:**
+- Log file analyzer
+- Configuration file manager
+- CSV data processor dengan validation
+- Data migration tools
+
+---
+
+### [🎨 Modul 9: Decorators & Context Managers (Advanced)](./modul9-decorators-context-managers.md)
+
+**Yang Dipelajari:**
+- Function decorators advanced
+- Class-based decorators
+- Decorators dengan parameters
+- Functools dan metadata preservation
+- Stacking decorators
+- Custom context managers (class dan generator)
+- Practical decorators (timer, cache, retry, validation)
+- Advanced decorator patterns
+
+**Latihan Praktik:**
+- LRU cache implementation
+- Resource pool manager
+- Monitoring decorator system
+- Access control decorators
+
+---
+
+### [⚡ Modul 10: Generators & Iterators](./modul10-generators-iterators.md)
+
+**Yang Dipelajari:**
+- Iteration protocol
+- Custom iterators
+- Generator functions dengan yield
+- Generator expressions
+- itertools module
+- Infinite sequences
+- Generator composition dan chaining
+- Memory-efficient data processing
+
+**Latihan Praktik:**
+- Data processing pipeline
+- Infinite sequence generators
+- Custom iterator untuk date ranges
+- File processing dengan generators
+- Stream processors
+
+---
+
+### [🚄 Modul 11: Asynchronous Programming](./modul11-async-programming.md)
+
+**Yang Dipelajari:**
+- Synchronous vs Asynchronous programming
+- Async/await syntax
+- Coroutines dan asyncio
+- Creating dan managing tasks
+- Async context managers
+- Async iterators dan generators
+- Concurrent operations (gather, wait)
+- Error handling dalam async code
+- Async queue dan synchronization
+
+**Latihan Praktik:**
+- Async download manager
+- Async task queue dengan workers
+- Concurrent API requests
+- Web scraping dengan rate limiting
+- Real-time monitoring system
+
+---
+
 ## 🏆 Progress Tracker
 
 Gunakan checklist ini untuk melacak kemajuan belajar Anda:
+
+### Materi Dasar (Beginner)
 
 ### Modul 1: Tipe Data & Variabel
 - [ ] Membaca dan memahami teori
@@ -168,6 +295,64 @@ Gunakan checklist ini untuk melacak kemajuan belajar Anda:
 - [ ] Latihan 5: Sistem antrian
 - [ ] Latihan mandiri (minimal 2)
 
+### Materi Expert (Advanced)
+
+### Modul 6: Functions & Modules (Expert)
+- [ ] Membaca dan memahami teori
+- [ ] Lambda functions dan higher-order functions
+- [ ] Map, filter, reduce operations
+- [ ] Closures dan decorators dasar
+- [ ] Recursive functions dengan memoization
+- [ ] Modules dan packages
+- [ ] Latihan mandiri (minimal 3)
+
+### Modul 7: Object-Oriented Programming
+- [ ] Membaca dan memahami teori
+- [ ] Classes dan objects
+- [ ] Encapsulation dan property decorators
+- [ ] Inheritance dan polymorphism
+- [ ] Special methods (magic methods)
+- [ ] Abstract base classes
+- [ ] Design patterns
+- [ ] SOLID principles
+- [ ] Latihan mandiri (minimal 3)
+
+### Modul 8: File I/O & Exception Handling
+- [ ] Membaca dan memahami teori
+- [ ] File operations
+- [ ] CSV dan JSON handling
+- [ ] Exception handling
+- [ ] Custom exceptions
+- [ ] Context managers
+- [ ] Latihan mandiri (minimal 3)
+
+### Modul 9: Decorators & Context Managers
+- [ ] Membaca dan memahami teori
+- [ ] Advanced decorators
+- [ ] Class-based decorators
+- [ ] Decorators dengan parameters
+- [ ] Custom context managers
+- [ ] Practical implementations
+- [ ] Latihan mandiri (minimal 3)
+
+### Modul 10: Generators & Iterators
+- [ ] Membaca dan memahami teori
+- [ ] Custom iterators
+- [ ] Generator functions
+- [ ] Generator expressions
+- [ ] itertools module
+- [ ] Memory-efficient processing
+- [ ] Latihan mandiri (minimal 3)
+
+### Modul 11: Asynchronous Programming
+- [ ] Membaca dan memahami teori
+- [ ] Async/await syntax
+- [ ] Coroutines dan asyncio
+- [ ] Concurrent operations
+- [ ] Async context managers
+- [ ] Error handling dalam async
+- [ ] Latihan mandiri (minimal 3)
+
 ## 💡 Tips Belajar Efektif
 
 1. **Jangan Skip Latihan**: Setiap latihan dirancang untuk memperkuat pemahaman konsep tertentu.
@@ -182,25 +367,30 @@ Gunakan checklist ini untuk melacak kemajuan belajar Anda:
 
 ## 🚀 Langkah Selanjutnya
 
-Setelah menyelesaikan semua modul, Anda siap untuk:
+Setelah menyelesaikan semua modul dasar (1-5), lanjutkan ke **Materi Expert Level (Modul 6-11)** yang sudah tersedia di repository ini!
 
-### Level Intermediate
-- **Functions dan Modules**
-- **Object-Oriented Programming (OOP)**
-- **File I/O dan Exception Handling**
-- **Working with APIs**
+### Materi Expert yang Tersedia
+- **Modul 6**: Functions & Modules (Expert Level)
+- **Modul 7**: Object-Oriented Programming (OOP)
+- **Modul 8**: File I/O & Exception Handling
+- **Modul 9**: Decorators & Context Managers
+- **Modul 10**: Generators & Iterators
+- **Modul 11**: Asynchronous Programming
 
-### Spesialisasi
-- **Web Development**: Django, Flask
-- **Data Science**: Pandas, NumPy, Matplotlib
-- **GUI Development**: Tkinter, PyQt
-- **Automation**: Selenium, Beautiful Soup
+### Setelah Menguasai Semua Modul
 
-### Best Practices
+#### Spesialisasi
+- **Web Development**: Django, Flask, FastAPI
+- **Data Science**: Pandas, NumPy, Matplotlib, Scikit-learn
+- **GUI Development**: Tkinter, PyQt, Kivy
+- **Automation**: Selenium, Beautiful Soup, Scrapy
+- **DevOps**: Docker, CI/CD, Cloud Platforms
+
+#### Best Practices
 - **Code Organization**: PEP 8, Virtual Environments
-- **Version Control**: Git dan GitHub
-- **Testing**: Unit Tests, pytest
-- **Documentation**: Docstrings, Sphinx
+- **Version Control**: Git dan GitHub Advanced
+- **Testing**: Unit Tests, pytest, TDD
+- **Documentation**: Docstrings, Sphinx, MkDocs
 
 ## 📞 Dukungan
 
@@ -212,8 +402,10 @@ Jika Anda mengalami kesulitan atau memiliki pertanyaan:
 
 ---
 
-**🎯 Target Akhir:** Menguasai konsep dasar pemrograman Python dan siap melanjutkan ke materi yang lebih advanced!
+**🎯 Target Akhir:** Menguasai konsep dasar hingga expert level pemrograman Python dan siap untuk proyek-proyek real-world atau spesialisasi!
 
-**📅 Estimasi Waktu:** 4-6 minggu dengan komitmen belajar 1-2 jam per hari.
+**📅 Estimasi Waktu:** 
+- **Materi Dasar (Modul 1-5)**: 4-6 minggu dengan komitmen belajar 1-2 jam per hari
+- **Materi Expert (Modul 6-11)**: 6-8 minggu dengan komitmen belajar 2-3 jam per hari
 
-**💪 Semangat Belajar!** Ingat, setiap programmer expert pernah menjadi pemula. Yang membedakan adalah konsistensi dan ketekunan dalam belajar.
+**💪 Semangat Belajar!** Ingat, setiap programmer expert pernah menjadi pemula. Yang membedakan adalah konsistensi dan ketekunan dalam belajar. Dengan materi expert level ini, Anda memiliki semua yang dibutuhkan untuk menjadi Python developer yang handal!
